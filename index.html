@@ -128,6 +128,21 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{ou
 .split .pic{aspect-ratio:4/5;border-radius:14px;background-size:cover;background-position:center}
 .cta2{background:linear-gradient(150deg,rgba(10,18,28,.93),rgba(18,38,58,.85)),url('img/scaffold.jpg') center 40%/cover}
 .nicei{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:7px 13px;font-size:13.5px;font-weight:600;margin-top:16px}
+
+.ctop{height:190px}
+@media(max-width:700px){.ctop{height:160px}}
+.faqs{max-width:820px;margin:0 auto}
+.faq{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:600;font-size:16px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--acc);font-weight:400;line-height:1}
+.faq[open] summary::after{content:"\2212"}
+.faq p{padding:0 18px 16px;color:var(--mut);font-size:15px;margin:0}
+.callbar{display:none}
+@media(max-width:820px){
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--deep2);color:#fff;align-items:center;justify-content:center;gap:10px;padding:13px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 -4px 18px rgba(0,0,0,.28)}
+ body{padding-bottom:56px}
+}
 </style>
 
 <div class="demobar">This is a <b>concept website</b> built by AG1 Consulting for First Class Roofing NE. It is not a live site and no form on it sends anywhere.</div>
@@ -141,6 +156,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{ou
       <a href="#why">Why Us</a>
       <a href="#work">Our Work</a>
       <a href="#areas">Areas</a>
+      <a href="#faq">FAQ</a>
     </div>
     <a class="call" href="tel:+447426564967">&#9742; 07426 564967</a>
   </div>
@@ -350,6 +366,23 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{ou
   </div>
 </section>
 
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="sh">
+      <div class="kick">Straight answers</div>
+      <h2>The questions everyone asks before they ring</h2>
+      <p>No sales spin. If the honest answer is unhelpful, we would rather give it now.</p>
+    </div>
+    <div class="faqs">
+      <details class="faq"><summary>Do you really not take a deposit?</summary><p>Correct. No money changes hands until the work is finished and you are happy with it. Almost every roofing horror story starts with a deposit, so we removed the part that makes it possible.</p></details>
+      <details class="faq"><summary>How much is a new roof?</summary><p>It depends on the size, the pitch, the access, whether the timbers underneath are sound and how much scaffold the job needs. Anybody quoting a price down the phone without seeing it is guessing. We come and look, then give you a firm number in writing.</p></details>
+      <details class="faq"><summary>What does the 20-year guarantee actually cover?</summary><p>Our workmanship, in writing, on qualifying work such as new roofs and flat roofing systems. Materials carry their own manufacturer warranties on top. We will hand you both in writing rather than say it on the doorstep.</p></details>
+      <details class="faq"><summary>What is Google Guaranteed?</summary><p>Google vets the business, checks the insurance and background, and then backs the job up to &pound;2,000 if something goes wrong. It is Google standing behind us, not us standing behind ourselves.</p></details>
+      <details class="faq"><summary>How quickly can you come out?</summary><p>For a leak or storm damage, usually the same day or the next. Ring rather than filling the form &mdash; an open roof does not wait for an email.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="cta2">
   <div class="wrap">
     <h2>Free quote, in writing, with no deposit.</h2>
@@ -392,7 +425,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{ou
     </div>
     <div class="fnote">
       <b>Concept demonstration &mdash; not a live website.</b> This page was produced by AG1 Consulting to show First Class Roofing NE one way their website could work. No form on this page submits anywhere and the instant response shown is a demonstration of routing only &mdash; it is not a quotation, an estimate or an offer.
-      Company name, company number, location, telephone number, service list, areas covered and all photography are taken from First Class Roofing's own published website and public record and remain their property. Google Guaranteed status, the &pound;2,000 backing, &pound;2M public liability cover, the no-deposit policy, workmanship guarantees of up to 20 years and the &ldquo;10+ years' experience&rdquo; claim are <b>as published on their own website.</b> <b>Service descriptions, the flat-roofing detail, the four-step process and the additional towns listed are illustrative wording written by AG1 to demonstrate the layout &mdash; they have not been confirmed with First Class Roofing and should not be read as commitments the business has made.</b> No prices, ratings, review counts or customer testimonials appear anywhere on this page.
+      Company name, company number, location, telephone number, service list, areas covered and all photography are taken from First Class Roofing's own published website and public record and remain their property. Google Guaranteed status, the &pound;2,000 backing, &pound;2M public liability cover, the no-deposit policy, workmanship guarantees of up to 20 years and the &ldquo;10+ years' experience&rdquo; claim are <b>as published on their own website.</b> <b>Service descriptions, the flat-roofing detail, the four-step process and the additional towns listed and the FAQ answers are illustrative wording written by AG1 to demonstrate the layout &mdash; they have not been confirmed with First Class Roofing and should not be read as commitments the business has made.</b> No prices, ratings, review counts or customer testimonials appear anywhere on this page.
     </div>
   </div>
 </footer>
@@ -422,3 +455,5 @@ function route(e){
   return false;
 }
 </script>
+
+<a class="callbar" href="tel:+447426564967">&#9742; Call 07426 564967</a>
